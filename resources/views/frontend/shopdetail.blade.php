@@ -7,7 +7,7 @@
                     <img src="images/download (1).jpeg"  class="shadow-lg p-3 mb-5 bg-white rounded detailimg">
                 </div>
                 <div class="col-md-6 pl-1 col-sm-12">
-                    <h5 class="pt-5">Liana luxury red off the shoulder full skirt vintage swing dress</h5>
+                    <h5 class="pt-5">{{$item->name}}</h5>
                     <i class="far fa-star staricon"></i>
                     <i class="far fa-star staricon"></i>
                     <i class="far fa-star staricon"></i>

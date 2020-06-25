@@ -2,9 +2,7 @@
     @section('content');
 
     <div class="row">
-      <div class="col-md-3 col-lg-2 topcategory d-none d-md-block">
-
-
+      <div class="col-md-3 col-lg-2 topcategory d-none d-md-block"> 
         <ul class="menu-category">
           @foreach($categories as $category)
           <li class="dropdown-submenu"><a href="#" class="droplink elc">{{$category->name}}<i class="fa fa-angle-right someicon"></i>
@@ -15,12 +13,10 @@
             <li class=""><a href="{{route('shop', $subcategory->id)}}" class="droplink">{{$subcategory->name}}</a></li>
             @endforeach
           </ul>
-        @endif
+          @endif
         </li>
         @endforeach
       </ul>
-
-
     </div>
     <div class="col-md-9 col-lg-10">
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -50,57 +46,58 @@
         </a>
       </div>
     </div>
-
+    
     <div class="container my-3">
-    <div class="row">
-      <div class="col-md-4">
-        <h3 class="text-center" >DISCOUNT ITEMS</h3>
-      </div>
-      <div class="col-md-7 mr-1">
-        <hr>
-  
-      </div>
-    </div>
-    </div>
-        <!-- Discount Items Lists -->
-      @foreach($discountItems as $row)
-    <div class="box col-md-4 m-md-4 col-sm-5 m-sm-3 col-lg-2 mx-lg-3  my-sm-3 my-md-2 my-lg-2 my-4">
-    <div class="card">
-      <a href="#"><img src="{{$row->photo}}" class="img-fluid" alt="..."></a>
-    </div>
-    <div class="card-body">
-      <h5 class="card-title">{{$row->name}}</h5>
-      <p class="card-text">{{$row->price}}</p>
-      <div class="button_show"><a href="#" class="btn btn-dark ">Add to cart</a></div>   
-    </div>
-    </div>
-      @endforeach
-      
-      <!-- Recommend Items List -->
-      <div class="container mt-5">
       <div class="row">
-      <div class="col-md-4">
-        <h3 class="text-center" >RECOMMEND ITEMS</h3>
-      </div>
-      <div class="col-md-7 mr-1">
-        <hr>
-
+        <div class="col-md-4">
+          <h3 class="text-center" >DISCOUNT ITEMS</h3>
+        </div>
+        <div class="col-md-7 mr-1">
+          <hr>
+          
+        </div>
       </div>
     </div>
-    </div>
-
-      @foreach($recommendItems as $row)
+    
+    <!-- Discount Items Lists -->
+    @foreach($discountItems as $row)
     <div class="box col-md-4 m-md-4 col-sm-5 m-sm-3 col-lg-2 mx-lg-3  my-sm-3 my-md-2 my-lg-2 my-4">
-    <div class="card">
-      <a href="#"><img src="{{$row->photo}}" class="img-fluid" alt="..."></a>
+      <div class="card">
+        <a href="#"><img src="{{$row->photo}}" class="img-fluid" alt="..."></a>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">{{$row->name}}</h5>
+        <p class="card-text">{{$row->price}}</p>
+        <div class="button_show"><a href="javascript:void(0)" class="addtocart btn btn-dark" data-id="{{$row->id}}" data-name="{{$row->name}}" data-codeno="{{$row->codeno}}" data-photo="{{$row->photo}}" data-price="{{$row->price}}" data-discount="{{$row->discount}}">Add to cart</a></div>   
+      </div>
     </div>
-    <div class="card-body">
-      <h5 class="card-title">{{$row->name}}</h5>
-      <p class="card-text">{{$row->price}}</p>
-      <div class="button_show"><a href="#" class="btn btn-dark ">Add to cart</a></div>   
+    @endforeach
+    
+    <!-- Recommend Items List -->
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-4">
+          <h3 class="text-center">RECOMMEND ITEMS</h3>
+        </div>
+        <div class="col-md-7 mr-1">
+          <hr>
+          
+        </div>
+      </div>
     </div>
+    
+    @foreach($recommendItems as $row)
+    <div class="box col-md-4 m-md-4 col-sm-5 m-sm-3 col-lg-2 mx-lg-3  my-sm-3 my-md-2 my-lg-2 my-4">
+      <div class="card">
+        <a href="#"><img src="{{$row->photo}}" class="img-fluid" alt="..."></a>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">{{$row->name}}</h5>
+        <p class="card-text">{{$row->price}}</p>
+        <div class="button_show"><a href="javascript:void(0)" class="addtocart btn btn-dark" data-id="{{$row->id}}" data-name="{{$row->name}}" data-codeno="{{$row->codeno}}" data-photo="{{$row->photo}}" data-price="{{$row->price}}" data-discount="{{$row->discount}}">Add to cart</a></div>   
+      </div>
     </div>
-      @endforeach
+    @endforeach
   </div>
 
-    @endsection
+  @endsection
