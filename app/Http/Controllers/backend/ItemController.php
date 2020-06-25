@@ -73,17 +73,17 @@ class ItemController extends Controller
         $item = new Item;
         $item->name = $request->name;
         $item->codeno = $request->codeno;
-        $item->photo = $request->photo;
+        $item->photo = $filepath;
         $item->price = $request->price;
         $item->discount = $request->discount;
         $item->description = $request->description;
         $item->brand_id = $request->brand_id;
-        $item->sub_category_id = $request->subcategory_id;
+        $item->subcategory_id = $request->subcategory_id;
 
         $item->save();
 
         // Return
-        return redirect()->route('item.index');
+        return redirect()->route('items.index');
     }
 
     /**
@@ -105,7 +105,8 @@ class ItemController extends Controller
      */
     public function edit($id)
     {
-        //
+        // $subcategories = Subcategory::all();
+        // $brands = Brand:all();
     }
 
     /**

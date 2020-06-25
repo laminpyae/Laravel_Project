@@ -45,7 +45,7 @@
 			<div class="form-group row">
 				<label for="photo" class="col-lg-2">Image:</label>
 				<div class="col-lg-10">
-					<input type="file" name="photo" id="photo" accept="images/*">
+					<input type="file" name="photo" id="photo" class="img-fluid w-25">
 				</div>
 			</div>
 			<div class="form-group row">

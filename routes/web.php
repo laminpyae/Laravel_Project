@@ -24,7 +24,8 @@ Route::get('test', function()
 
 Route::get('dashboard', 'backend\BackendController@index')->name('dashboard');
 
-Route::resource('categories', 'backend\CategoryController')->middleware('auth');
+Route::resource('categories', 'backend\CategoryController');
+// ->middleware('auth');
 
 Route::resource('brands', 'backend\BrandController');
 
@@ -38,9 +39,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/', 'frontend\FrontendController@index')->name('index');
 
-Route::get('shop', 'frontend\FrontendController@shop')->name('shop');
+Route::get('shop/{id}', 'frontend\FrontendController@shop')->name('shop');
 
 Route::get('cart', 'frontend\FrontendController@cart')->name('cart');
 
-Route::get('shop/{id}', 'frontend\FrontendController@shopdetail')->name('shopdetail');
+Route::get('shopdetail/{id}', 'frontend\FrontendController@shopdetail')->name('shopdetail');
 

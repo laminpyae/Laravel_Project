@@ -40,7 +40,7 @@ class BrandController extends Controller
         // Validation
         $request->validate([
             'name' => 'required|min:5|max:191',
-            'logo' => 'required|mimes:jpeg,bmp,png'
+            'logo' => 'required'
         ]);
 
         // dd($request);

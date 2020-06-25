@@ -21,7 +21,7 @@
     <div class="d-flex flex-grow-1">
         
         <a href="/" class="navbar-brand"><img src="images/shop.png" height="50"></a>
-        <form class="mr-2 my-auto w-75 d-inline-block search-form order-lg-1 order-md-1 order-sm-2" action="brandshop.html">
+        <for0m class="mr-2 my-auto w-75 d-inline-block search-form order-lg-1 order-md-1 order-sm-2" action="brandshop.html">
          
 
            <input class="search-text" name="keyword" type="text" id="search-keyword" placeholder="Enter Shop" monkey="1">
@@ -52,7 +52,7 @@
  <!--  <div class="container">
     <div class="row">
       <div class="box col-md-4 m-md-4 col-sm-5 m-sm-3 col-lg-2 mx-lg-3  my-sm-3 my-md-2 my-lg-2 my-4">
-   2     <div class="mt-5">
+        <div class="mt-5">
         </div>
         <div class="card-body">
           <h5 class="card-title mt-3 text-center">Deals and Spical </h5>
