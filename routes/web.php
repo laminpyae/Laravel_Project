@@ -45,3 +45,7 @@ Route::get('cart', 'frontend\FrontendController@cart')->name('cart');
 
 Route::get('shopdetail/{id}', 'frontend\FrontendController@shopdetail')->name('shopdetail');
 
+Route::resource('orders', 'backend\OrderController');
+
+
+

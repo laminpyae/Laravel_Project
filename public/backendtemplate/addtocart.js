@@ -247,23 +247,17 @@ $('#shoppingcartTable').on('click', '.minus_btn', function() {
 // Checkout Process
 
 $('#shoppingcartTfoot').on('click', '.btnCheckout', function() {
-	var notes = $('#notes').val();
-	var total = $(this).data('total');
 
 	var itemString = localStorage.getItem('itemlist');
-	var itemArr = JSON.parse(itemString);
+	// var itemArr = JSON.parse(itemString);
 
- 	// console.log(notes);
- 	// console.log(total);
- 	// console.log(itemArr);
-
- 	$.post('storeorder.php', {
- 		cart : itemArr,
- 		notes : notes,
- 		total : total
- 	}, function(response) {
- 		// local storage clear
- 		localStorage.clear();
- 		location.href="ordersuccess.php";
- 	})
- })
+	$.ajaxSetup({
+		headers: {
+			'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+		}
+	});
+	
+	$.post('/orders', {data:itemString}, function(response) {
+		console.log(response);
+	});
+})

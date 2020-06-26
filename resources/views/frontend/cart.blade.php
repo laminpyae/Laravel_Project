@@ -1,8 +1,8 @@
 @extends('frontend.master')
 
 @section('content')
-
-<div class="container" style="margin-top: 200px;">
+<div class="row">
+<div class="container" style="margin-top: 100px">
 		<!-- Shopping Cart Display -->
 		<div class="divShoppincart">
 			<table class="table table-bordered">
@@ -31,3 +31,4 @@
 	</div>
 	
 @endsection
+</div>
